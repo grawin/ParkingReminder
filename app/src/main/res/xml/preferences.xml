@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RingtonePreference
+        android:title="Choose Alarm"
+        android:key="ringtone"
+        android:summary="Select sound for timer."
+        android:showDefault="true"
+        android:defaultValue="content://settings/system/alarm_alert" />
+
+    <CheckBoxPreference
+        android:key="@string/pref_key_notif_sound"
+        android:title="@string/pref_name_notif_sound"
+        android:summary="@string/pref_summary_notif_sound"
+        android:defaultValue="true" />
+
+    <CheckBoxPreference
+        android:key="@string/pref_key_notif_vibrate"
+        android:title="@string/pref_name_notif_vibrate"
+        android:summary="@string/pref_summary_notif_vibrate"
+        android:defaultValue="true" />
+
+    <com.grawin.parkingreminder.NumberPickerPreference
+        android:key="@string/pref_key_notif_countdown"
+        android:title="@string/pref_name_notif_countdown"
+        android:summary="@string/pref_summary_notif_countdown"
+        android:defaultValue="8" />
+
+    <CheckBoxPreference
+        android:key="@string/pref_key_track_pos"
+        android:title="@string/pref_name_track_pos"
+        android:summary="@string/pref_summary_track_pos"
+        android:defaultValue="false" />
+
+</PreferenceScreen>

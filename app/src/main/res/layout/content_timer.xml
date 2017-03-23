@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.grawin.parkingreminder.TimerActivity"
+    tools:showIn="@layout/activity_timer">
+
+    <LinearLayout
+        android:id="@+id/time_display"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:weightSum="1.0">
+
+        <TextView
+            android:id="@+id/hours_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textColor="@android:color/white"
+            android:textSize="48sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textColor="@android:color/white"
+            android:text="h"/>
+
+        <TextView
+            android:id="@+id/minutes_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textColor="@android:color/white"
+            android:textSize="48sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="m"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/time_display"
+        android:src="@android:drawable/ic_input_delete"
+        android:onClick="handleDelete"/>
+
+    <View
+        android:id="@+id/timer_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/time_display"
+        android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/timer_bar"
+        android:layout_centerInParent="true"
+        android:weightSum="1.0">
+
+        <LinearLayout
+            android:id="@+id/button_row_1"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="0.20"
+            android:weightSum="1.0">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:text="1"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:onClick="handleKeypad"
+                />
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:text="2"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:onClick="handleKeypad"
+                />
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:text="3"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:onClick="handleKeypad"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_row_2"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.20"
+            android:orientation="horizontal"
+            android:weightSum="1.0">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:text="4"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:onClick="handleKeypad"
+                />
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:text="5"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:onClick="handleKeypad"
+                />
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:text="6"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:onClick="handleKeypad"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_row_3"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.20"
+            android:orientation="horizontal"
+            android:weightSum="1.0">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:text="7"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:onClick="handleKeypad"
+                />
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:text="8"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:onClick="handleKeypad"
+                />
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:text="9"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:onClick="handleKeypad"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_row_4"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.20"
+            android:orientation="horizontal"
+            android:weightSum="1.0">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:clickable="false"
+                android:text=""
+                android:textSize="18sp"
+                />
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:text="0"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:onClick="handleKeypad"
+                />
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:clickable="false"
+                android:text=""
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <ImageButton
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@android:drawable/ic_media_play"
+        android:onClick="handleStartTimer"
+        />
+
+</RelativeLayout>

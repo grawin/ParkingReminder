@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Parking Reminder</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_timer">TimerActivity</string>
+
+    <!-- https://console.developers.google.com/ -->
+    <string name="google_app_id">1078736393019</string>
+
+
+    <!-- Shared Preferences Values -->
+    <string name="pref_park_lat">pref_park_lat</string>
+    <string name="pref_park_long">pref_park_long</string>
+    <string name="pref_layers">pref_layers</string>
+
+    <string name="pref_key_notif_sound">"pref_notif_sound"</string>
+    <string name="pref_name_notif_sound">"Sound Notification"</string>
+    <string name="pref_summary_notif_sound">"Enables sound notification for timer."</string>
+
+    <string name="pref_key_notif_vibrate">"pref_notif_vibrate"</string>
+    <string name="pref_name_notif_vibrate">"Vibrate Notification"</string>
+    <string name="pref_summary_notif_vibrate">"Enables vibrate notification for timer."</string>
+
+    <string name="pref_key_notif_countdown">"pref_notif_countdown"</string>
+    <string name="pref_name_notif_countdown">"Notification Countdown"</string>
+    <string name="pref_summary_notif_countdown">"Number of seconds to play the notification."</string>
+
+    <string name="pref_key_track_pos">"pref_track_pos"</string>
+    <string name="pref_name_track_pos">"Follow Location"</string>
+    <string name="pref_summary_track_pos">"Enables auto-panning map to follow user."</string>
+
+    <!-- display strings -->
+    <string name="str_complete">Timer ended at:</string>
+</resources>

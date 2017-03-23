@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <fragment android:id="@+id/map"
+              android:name="com.google.android.gms.maps.SupportMapFragment"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:map="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context="com.grawin.parkingreminder.MapsActivity"/>
+
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageButton
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_layers_blue_24dp"
+            android:contentDescription="Layers"
+            android:onClick="handleLayers"/>
+
+        <ImageButton
+            android:id="@+id/nav_button"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_navigation_blue_24dp"
+            android:contentDescription="Navigate"
+            android:onClick="handleNavigate"/>
+
+        <ImageButton
+            android:id="@+id/timer_button"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_timer_blue_24dp"
+            android:contentDescription="Timer"
+            android:onClick="handleTimer"/>
+
+        <ImageButton
+            android:id="@+id/park_button"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_local_parking_blue_24dp"
+            android:contentDescription="Park"
+            android:onClick="handlePark"/>
+
+        <ImageButton
+            android:id="@+id/my_loc_button"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_my_location_blue_24dp"
+            android:contentDescription="Locate"
+            android:onClick="handleLocate"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="00:00"
+        android:id="@+id/timer_text"
+        android:drawableLeft="@drawable/ic_timer_blue_24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/prefs_button"
+        android:src="@drawable/ic_settings_blue_24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="handlePreferenceButton" />
+</RelativeLayout>
